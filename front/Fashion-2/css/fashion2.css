@@ -14,6 +14,19 @@
 font-size: 14px;
 color: #777;
   }
+.first-nav-content a:hover
+{
+color: #c96;
+transition: 0.5s;
+} 
+.first-nav-login-link a:hover{
+  color: #c96;
+transition: 0.5s;
+}
+.first-nav-login-dropdown a:hover{
+  color: #c96;
+transition: 0.5s;
+}
 .first-nav-icons a{
     color: #777;
 }  
@@ -26,17 +39,20 @@ color: #777;
 .first-nav-login-dropdown a{
 font-size: 15px;
 }
+.first-nav-underline{
+  height: 1px;
+  width: 76.25rem;
+  background-color: #ebebeb;
+}
+
+
 .second-navbar i.fa-solid.fa-magnifying-glass {
   display: inline-block;
   padding: 20px 0 0 0;
   transform: rotate(90deg);
   font-size: 25px;
 }
-.first-nav-underline{
-  height: 1px;
-  width: 76.25rem;
-  background-color: #ebebeb;
-}
+
 .second-nav-my-wishlist{
   position: relative;
 }
@@ -66,6 +82,14 @@ color: #000;;
   top: -3px;
   left:30px ;
 }
+.second-nav-my-wishlist a:hover
+{
+color: #c96;
+transition: 0.5s;
+}
+
+
+
 .third-navbar{
   background-color: #222;
 }
@@ -75,9 +99,9 @@ color: #000;;
 .third-nav-icon{
   color: #c96;
 }
-
-
-
+.form-control:focus{
+  box-shadow: none;
+}
 .slide-content span.carousel-control {
   height: 40px;
   background-color: transparent;
@@ -102,7 +126,15 @@ color: #000;;
   border: 2px solid #fff;
   padding: 10px 30px ;
   border-radius: 2px;
+  color: #fff;
 }
+.slide-headings a:hover{
+
+  background-color: #fff;
+  color: #c96;
+  transition: 0.5s;
+}
+
 .banner-of-women-collection{
   background-image: url('../images/banners/banner-1.jpg');
   background-repeat: no-repeat;
@@ -113,9 +145,15 @@ color: #000;;
 }
 .women-collection-content a{
   width: 120px;
+  color: #fff;
 border-bottom: 2px white solid;
 padding: 10px 0 7px 0;
 font-size: 15px;
+}
+.women-collection-content a:hover{
+  background-color: #fff;
+  color: #000;
+  transform: 0.5s;
 }
 .first{
   background-image: url('../images/banners/banner-2.jpg');
@@ -130,7 +168,7 @@ font-size: 15px;
   justify-content: center;
 }
 .nav-tabs{
-  border-bottom: 0 !important;
+  border-bottom: none !important;
 }
 .detail-of-product-by-tab .nav-tabs .nav-link.active{
   border-bottom: 2px solid #000 !important;
@@ -138,30 +176,115 @@ font-size: 15px;
 .nav-tabs .nav-link{
   border: none !important;
 }
-.product-pic-one-hover{
+.swiper-slide.card.swiper-slide-active {
+  border: none;
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   display: none;
 }
-.product-detail-card:hover .product-pic-one{
-  display: none;
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  font-size: 20px;
+  content: 'prev';
 }
-/* .product-detail-card:hover .product-pic-one-hover{
-  display: block;
-} */
-.product-detail-card{
-  width: 286px;
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: 'next';
+  font-size: 20px;
 }
-.product-add-switch a{
-  color: #c96;
-  background-color: #222;
+.swiper.mySwiper.container.col-lg-3col-md-6col-sm-12{
+  margin-right: 10px;
+}
+
+.product-card{
   width: 276px;
-  padding: 10px;
-  margin-right: 10px
 }
-.picture-of-product{
-  width: 280px;
-  height: 376px;
+.product-pic{
+  width: 276px;
+  height:376px ;
 }
-.picture-of-product img{
+.product-pic img{
   width: 100%;
   height: 100%;
+}
+.product-add-switch{
+  position: relative;
+}
+.product-add-switch a{
+  color:#c96;
+  background-color: #fff;
+  border-radius: 6px 6px 0 0;
+  width: 276px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 9px 0;
+  display: none;
+}
+/* .product-add-switch a:hover{
+  display: block;
+} */
+.product-card:hover{
+  box-shadow: #ebebeb 10px 7px 20px;
+  transition: 0.5s;
+}
+.product-card:hover .product-add-switch a{
+  display: block;
+  transition: 0.5s;
+}
+.product-add-switch a:hover{
+background-color: #c96;
+color: #fff;
+}
+.detail-of-product h6{
+  color: #cccccc;
+}
+.detail-of-product h5{
+  font-size: 15.5px;
+}
+.product-other-pics{
+  height: 51px;
+  width: 40.8px;
+}
+.product-other-pics img{
+  height: 100%;
+  width: 100%;;
+}
+.product-other-pic-one{
+  border: #cccccc 1px solid ;
+  padding: 0.8px;
+}
+.product-other-pic-two:hover{
+  border: #cccccc 1px solid ;
+  padding: 0.8px;
+  transition: 1s;
+}
+
+.product-pic-second{
+  display: none;
+}
+.product-card:hover .product-pic-first{
+  display: none;
+  transition: 0.7s;
+}
+.product-card:hover .product-pic-second{
+  display: block;
+  transition: 0.5s;
+}
+.product-card{
+  position: relative;
+}
+.rounded-heart-icon{
+position: absolute;
+top: 7px;
+right: 10px;
+background-color: #fff;
+color: #c96;
+padding: 3px 7px;
+border-radius: 50% ;
+box-shadow: #cccccc 10px 1px 10px ;
+display: none;
+}
+.product-card:hover .rounded-heart-icon
+{
+display: block;
+transition: 1s;
 }
