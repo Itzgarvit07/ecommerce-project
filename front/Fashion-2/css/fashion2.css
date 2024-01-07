@@ -92,6 +92,10 @@ transition: 0.5s;
 
 .third-navbar{
   background-color: #222;
+  width: 100%;
+  position: sticky;
+  top:0;
+  z-index: 3;
 }
 .dropdown-arrow{
   font-size: 11px;
@@ -150,10 +154,10 @@ border-bottom: 2px white solid;
 padding: 10px 0 7px 0;
 font-size: 15px;
 }
-.women-collection-content a:hover{
+.women-collection-content:hover  .shop-now-link{
   background-color: #fff;
   color: #000;
-  transform: 0.5s;
+  transition: 0.5s;
 }
 .first{
   background-image: url('../images/banners/banner-2.jpg');
@@ -176,26 +180,29 @@ font-size: 15px;
 .nav-tabs .nav-link{
   border: none !important;
 }
-.swiper-slide.card.swiper-slide-active {
-  border: none;
-}
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+.owl-dots {
   display: none;
 }
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
-  font-size: 20px;
-  content: 'prev';
+.owl-nav{
+  position: relative;
 }
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-  content: 'next';
-  font-size: 20px;
+.owl-prev span{
+  position: absolute;
+font-size: 50px;
+top: -380px;
+left: -60px;
+color: #000;
 }
-.swiper.mySwiper.container.col-lg-3col-md-6col-sm-12{
-  margin-right: 10px;
+.owl-next span{
+  font-size: 50px;
+  position: absolute;
+  top: -380px;
+right: -60px;
 }
 
 .product-card{
   width: 276px;
+  height: 530px;
 }
 .product-pic{
   width: 276px;
@@ -219,16 +226,15 @@ font-size: 15px;
   padding: 9px 0;
   display: none;
 }
-/* .product-add-switch a:hover{
-  display: block;
-} */
+
 .product-card:hover{
   box-shadow: #ebebeb 10px 7px 20px;
   transition: 0.5s;
+  cursor: pointer;
 }
 .product-card:hover .product-add-switch a{
   display: block;
-  transition: 0.5s;
+  transition: 1s ;
 }
 .product-add-switch a:hover{
 background-color: #c96;
@@ -259,14 +265,14 @@ color: #fff;
 }
 
 .product-pic-second{
-  display: none;
+  visibility: hidden;
 }
 .product-card:hover .product-pic-first{
   display: none;
-  transition: 0.7s;
+  transition: 1s;
 }
 .product-card:hover .product-pic-second{
-  display: block;
+  visibility: visible;
   transition: 0.5s;
 }
 .product-card{
@@ -287,4 +293,8 @@ display: none;
 {
 display: block;
 transition: 1s;
+}
+.detail-of-product h5:hover{
+  color: #c96;
+  transition: 1s;
 }
